@@ -1,0 +1,29 @@
+/* -----------------------------------------------------------------------------
+ * Settings > Colors.
+ * -------------------------------------------------------------------------- */
+:root {
+	// Accent.
+	--aura-root__accent--color: #0274be;
+	--aura-root__accent--text-color: #fff;
+	// Heading.
+	--aura-root__heading--color: #111;
+	--aura-root__heading--link-color: #111;
+	--aura-root__heading--hover-color: #555;
+	// Body.
+	--aura-root__body--color: #555;
+	--aura-root__body--link-color: #0274be;
+	--aura-root__body--hover-color: #111;
+	--aura-root__body--light-color: #999;
+	--aura-root__body--muted-color: #bbb;
+	// General.
+	--aura-root__general--border-color: #eee;
+	--aura-root__general--background-color: #fff;
+	--aura-root__general--background-alt-color: #eee;
+	// Feedback.
+	--aura-root__feedback--success-color: #88c459;
+	--aura-root__feedback--success-text-color: #{get-text-color(#88c459)};
+	--aura-root__feedback--error-color: #f5414f;
+	--aura-root__feedback--error-text-color: #{get-text-color(#f5414f)};
+	--aura-root__feedback--warning-color: #ffd137;
+	--aura-root__feedback--warning-text-color: #{get-text-color(#ffd137)};
+}

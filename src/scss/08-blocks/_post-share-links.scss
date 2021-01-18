@@ -1,0 +1,116 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Post Share Links.
+ * -------------------------------------------------------------------------- */
+.aura-post-share-links {
+	&__item {
+		--brand-color: #555;
+		--text-color: #fff;
+	}
+
+	&__item--facebook {
+		--brand-color: #3b5998;
+		--text-color: #fff;
+	}
+
+	&__item--twitter {
+		--brand-color: #00aced;
+		--text-color: #fff;
+	}
+
+	&__item--pinterest {
+		--brand-color: #cb2027;
+		--text-color: #fff;
+	}
+
+	&__item--linkedin {
+		--brand-color: #007bb6;
+		--text-color: #fff;
+	}
+}
+
+/* Blocks > Post Share Links > Type: Icons
+ * -------------------------------------------------------------------------- */
+.aura-post-share-links--type-icons {
+	.aura-post-share-links {
+		&__item {
+			font-size: 1.25rem;
+			line-height: 1;
+			margin-top: 0.5rem;
+
+			&:first-of-type {
+				margin-top: 0;
+			}
+		}
+
+		&__link {
+			align-items: center;
+			background-color: var(--aura-root__general--background-alt-color);
+			color: var(--brand-color);
+			display: flex;
+			height: 3rem;
+			justify-content: center;
+			width: 3rem;
+
+			&:hover {
+				background-color: var(--brand-color);
+				color: var(--text-color);
+			}
+		}
+
+		&__link-text {
+			font-size: 0;
+			line-height: 0;
+		}
+	}
+}
+
+/* Blocks > Post Share Links > Type: Buttons
+ * -------------------------------------------------------------------------- */
+.aura-post-share-links--type-buttons {
+	line-height: 1;
+
+	.aura-post-share-links {
+		&__items {
+			display: flex;
+			flex-wrap: wrap;
+			margin: -0.25rem;
+		}
+
+		&__item {
+			flex-grow: 1;
+			padding: 0.25rem;
+		}
+
+		&__link {
+			align-items: center;
+			background-color: var(--brand-color);
+			color: var(--text-color);
+			display: flex;
+			justify-content: center;
+			padding: 0.75rem 1rem;
+
+			&:hover {
+				background-color: var(--aura-button--background-color);
+				color: var(--aura-button--color);
+			}
+		}
+
+		&__link-icon {
+			margin-right: 0.5rem;
+		}
+
+		&__link-text {
+			font-size: 0.875rem;
+			font-weight: 700;
+		}
+
+		&__item--linkedin {
+			.aura-post-share-links {
+				&__link-icon {
+					position: relative;
+					top: -1px;
+				}
+			}
+		}
+	}
+}

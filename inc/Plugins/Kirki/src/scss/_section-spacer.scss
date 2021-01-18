@@ -1,0 +1,13 @@
+/* -----------------------------------------------------------------------------
+ * Section: Spacer.
+ * -------------------------------------------------------------------------- */
+.control-section-kirki-spacer {
+	background-color: #eee;
+	border-bottom: 1px solid #ddd;
+	height: 10px;
+	pointer-events: none;
+
+	.accordion-section-title {
+		display: none;
+	}
+}

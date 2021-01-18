@@ -1,0 +1,84 @@
+/* -----------------------------------------------------------------------------
+ * Vendor > Select2
+ * https://select2.org/
+ * -------------------------------------------------------------------------- */
+.select2,
+.select2-dropdown {
+	--aura-select2__height: 42px;
+	--aura-select2__padding-v: 5px;
+	--aura-select2__padding-h: 16px;
+}
+
+.select2 {
+	height: var(--aura-select2__height);
+}
+
+.select2-container--default {
+	.select2-selection--single {
+		border: 1px solid var(--aura-root__general--border-color);
+		border-radius: 0;
+		height: var(--aura-select2__height);
+		outline: 0;
+
+		.select2-selection__arrow {
+			height: var(--aura-select2__height);
+		}
+
+		.select2-selection__rendered {
+			color: var(--aura-root__body--color);
+			line-height: var(--aura-select2__height);
+			padding: 0 var(--aura-select2__padding-h);
+		}
+	}
+
+	.select2-search--dropdown .select2-search__field {
+		background-color: var(--aura-root__general--background-alt-color);
+		border: 1px solid var(--aura-root__general--border-color);
+		padding: var(--aura-select2__padding-v) calc(var(--aura-select2__padding-h) - 4px);
+	}
+
+	.select2-results__option {
+		&[aria-selected='true'],
+		&[data-selected='true'] {
+			background-color: transparent;
+		}
+
+		&--highlighted[aria-selected],
+		&--highlighted[data-selected] {
+			background-color: var(--aura-root__accent--color);
+			color: var(--aura-root__accent--text-color);
+			cursor: pointer;
+		}
+	}
+}
+
+.select2-dropdown {
+	border: 0;
+	box-shadow: var(--aura-root__box-shadow);
+}
+
+.select2-container--open .select2-dropdown--above {
+	transform: translateY(-10px);
+}
+
+.select2-container--open .select2-dropdown--below {
+	transform: translateY(10px);
+}
+
+.select2-search--dropdown {
+	&::before {
+		@extend %fas;
+
+		color: var(--aura-root__body--muted-color);
+		content: '\f002';
+		pointer-events: none;
+		position: absolute;
+		right: 12px;
+		top: 8px;
+	}
+}
+
+.select2-results__option {
+	font-size: 14px;
+	padding: var(--aura-select2__padding-v) var(--aura-select2__padding-h);
+}

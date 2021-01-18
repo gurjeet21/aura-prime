@@ -1,0 +1,62 @@
+{
+    "key": "group_5bc43de826878",
+    "title": "Custom Codes",
+    "fields": [
+        {
+            "key": "field_5bc47c72cbf0e",
+            "label": "Header Scripts",
+            "name": "aura_option_code_before_closing_head_tag",
+            "type": "textarea",
+            "instructions": "This code will output just above the closing <code>&#60;&#47;head&#62;<\/code> tag in the document source.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 12,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5bc47df7a8628",
+            "label": "Footer Scripts",
+            "name": "aura_option_code_before_closing_body_tag",
+            "type": "textarea",
+            "instructions": "This code will output just above the closing <code>&#60;&#47;body&#62;<\/code> tag in the document source.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 12,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "aura_theme_options"
+            }
+        ]
+    ],
+    "menu_order": 100,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1547119275
+}

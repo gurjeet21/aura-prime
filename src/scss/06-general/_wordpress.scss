@@ -1,0 +1,121 @@
+/* -----------------------------------------------------------------------------
+ * Utilities > WordPress
+ * -------------------------------------------------------------------------- */
+.alignleft,
+.wp-caption.alignleft,
+.alignright,
+.wp-caption.alignright,
+.aligncenter,
+.wp-caption.aligncenter {
+	clear: both;
+	display: block;
+	margin: 30px auto;
+}
+
+@media (min-width: #{get-breakpoint('md')}) {
+	.alignleft,
+	.wp-caption.alignleft {
+		float: left;
+		margin: 3px 30px 12px 0;
+	}
+
+	.alignright,
+	.wp-caption.alignright {
+		float: right;
+		margin: 3px 0 12px 30px;
+	}
+}
+
+.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+.wp-caption {
+	max-width: 100%;
+
+	img {
+		display: block;
+		width: 100%;
+	}
+
+	br {
+		display: none;
+	}
+}
+
+.wp-caption-text {
+	background-color: var(--aura-root__general--background-alt-color);
+	font-size: 13px;
+	font-style: italic;
+	line-height: 1.4;
+	padding: 10px;
+}
+
+.sticky,
+.bypostauthor {
+	display: block;
+}
+
+.wp-smiley {
+	border: 0;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+
+	&:focus {
+		background-color: #f5f5f5;
+		border-radius: 3px;
+		box-shadow: 0 0 2px 2px rgba(black, 0.6);
+		clip: auto !important;
+		color: #21759b;
+		display: block;
+		font-size: 14px;
+		font-weight: bold;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: get-z-index('screen-reader-text');
+	}
+}
+
+/* General > WordPress Specific > Gallery
+ * -------------------------------------------------------------------------- */
+.gallery {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(1, 1fr);
+	margin-bottom: get-space('md');
+
+	@media (min-width: 426px) {
+		grid-template-columns: repeat(2, 1fr);
+
+		&.gallery-columns-1 {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}
+
+@media (min-width: #{get-breakpoint(xl)}) {
+	@for $i from 3 through 9 {
+		.gallery-columns-#{$i} {
+			grid-template-columns: repeat(#{$i}, 1fr);
+		}
+	}
+}
+
+.gallery-item {
+	margin-bottom: 0;
+	width: 100%;
+}

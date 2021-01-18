@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// Blank.
+// -----------------------------------------------------------------------------
+@mixin blank {
+	@content;
+}
+
+// -----------------------------------------------------------------------------
+// Fuild
+// @link https://www.madebymike.com.au/
+// @link https://codepen.io/MadeByMike/pen/vNrvdZ
+// @link https://www.sassmeister.com/gist/7f22e44ace49b5124eec
+// -----------------------------------------------------------------------------
+@mixin fluid($properties, $min-value, $max-value, $min-vw: 375px, $max-vw: 1200px) {
+	@include blank {
+		@each $property in $properties {
+			#{$property}: $min-value;
+		}
+	}
+
+	@media (min-width: $min-vw) {
+		@each $property in $properties {
+			#{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+		}
+	}
+
+	@media (min-width: $max-vw) {
+		@each $property in $properties {
+			#{$property}: $max-value;
+		}
+	}
+}

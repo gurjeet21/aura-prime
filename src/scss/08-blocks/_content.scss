@@ -1,0 +1,119 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Site Content
+ * -------------------------------------------------------------------------- */
+:root {
+	--aura-content__sidebar--width: 360px;
+}
+
+.aura-content {
+	&__inner {
+		display: grid;
+		grid-gap: 60px;
+		grid-template-columns: 100%;
+	}
+
+	&__sidebar {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: var(--aura-content__sidebar--width);
+		width: 100%;
+	}
+
+	&__sidebar-widget-area {
+		width: 100%;
+
+		.widget {
+			background-color: var(--aura-root__general--background-alt-color);
+			padding: 30px;
+
+			+ .widget {
+				margin-top: 30px;
+			}
+		}
+	}
+}
+
+@media (min-width: #{get-breakpoint('lg')}) {
+	.aura--sidebar-enabled {
+		.aura-content {
+			&__inner {
+				grid-template-areas: 'main sidebar';
+				grid-template-columns: minmax(0, 1fr) var(--aura-content__sidebar--width);
+			}
+
+			&__main {
+				grid-area: main;
+			}
+
+			&__sidebar {
+				grid-area: sidebar;
+				position: relative;
+			}
+		}
+	}
+
+	.aura--sidebar-position-left {
+		.aura-content {
+			&__inner {
+				grid-template-areas: 'sidebar main';
+				grid-template-columns: var(--aura-content__sidebar--width) 1fr;
+			}
+		}
+	}
+
+	.aura--sidebar-sticky-top {
+		.aura-content {
+			&__sidebar-widget-area {
+				position: sticky;
+				top: 20px;
+			}
+		}
+
+		&.admin-bar {
+			.aura-content {
+				&__sidebar-widget-area {
+					top: 32px + 20px;
+				}
+			}
+		}
+	}
+
+	.aura--sidebar-sticky-bottom {
+		.aura-content {
+			&__sidebar {
+				align-items: flex-end;
+				display: flex;
+			}
+
+			&__sidebar-widget-area {
+				bottom: 20px;
+				position: sticky;
+			}
+		}
+	}
+
+	.aura--sidebar-sticky-last-widget {
+		.aura-content {
+			&__sidebar {
+				display: flex;
+			}
+
+			&__sidebar-widget-area {
+				.widget:last-child {
+					position: sticky;
+					top: 20px;
+				}
+			}
+		}
+
+		&.admin-bar {
+			.aura-content {
+				&__sidebar-widget-area {
+					.widget:last-child {
+						top: 32px + 20px;
+					}
+				}
+			}
+		}
+	}
+}

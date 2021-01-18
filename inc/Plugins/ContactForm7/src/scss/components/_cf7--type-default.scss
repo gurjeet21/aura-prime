@@ -1,0 +1,17 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Type Default
+ * -------------------------------------------------------------------------- */
+.aura-cf7__form--type-default {
+	.aura-cf7 {
+		&__field {
+			.aura-cf7__field-label {
+				display: block;
+			}
+
+			.wpcf7-form-control-wrap {
+				display: block;
+				padding: 0;
+			}
+		}
+	}
+}

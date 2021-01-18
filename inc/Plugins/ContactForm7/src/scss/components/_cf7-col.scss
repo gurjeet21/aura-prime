@@ -1,0 +1,42 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Columns
+ * -------------------------------------------------------------------------- */
+.aura-cf7-col {
+	@for $i from 1 through 12 {
+		&--sm-#{$i} {
+			grid-column: span $i;
+		}
+	}
+
+	@media (min-width: #{get-breakpoint('md')}) {
+		@for $i from 1 through 12 {
+			&--md-#{$i} {
+				grid-column: span $i;
+			}
+		}
+	}
+
+	@media (min-width: #{get-breakpoint('lg')}) {
+		@for $i from 1 through 12 {
+			&--lg-#{$i} {
+				grid-column: span $i;
+			}
+		}
+	}
+
+	@media (min-width: #{get-breakpoint('xl')}) {
+		@for $i from 1 through 12 {
+			&--xl-#{$i} {
+				grid-column: span $i;
+			}
+		}
+	}
+
+	@media (min-width: #{get-breakpoint('2xl')}) {
+		@for $i from 1 through 12 {
+			&--2xl-#{$i} {
+				grid-column: span $i;
+			}
+		}
+	}
+}

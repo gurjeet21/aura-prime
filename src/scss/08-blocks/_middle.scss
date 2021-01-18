@@ -1,0 +1,14 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Site Middle
+ * -------------------------------------------------------------------------- */
+.aura-middle {
+	padding: 30px 0;
+
+	@media (min-width: #{get-breakpoint('md')}) {
+		padding: 60px 0;
+	}
+
+	@media (min-width: #{get-breakpoint('lg')}) {
+		padding: 80px 0;
+	}
+}

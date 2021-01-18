@@ -1,0 +1,76 @@
+/* -----------------------------------------------------------------------------
+ * General > Order Bacs Details
+ * -------------------------------------------------------------------------- */
+.woocommerce ul.order_details {
+	$border-color: rgba(240, 222, 222, 0.1);
+
+	background-color: var(--aura-root__general--background-alt-color);
+	padding: 40px;
+	position: relative;
+
+	@media (max-width: 768px) {
+		padding: 30px;
+	}
+
+	@media (max-width: 425px) {
+		padding: 25px;
+	}
+
+	&::before,
+	&::after {
+		background-color: transparent;
+		background-image: radial-gradient(closest-side, transparent 9px, var(--aura-root__general--background-alt-color) 100%);
+		background-position: 0 10px, 40px 40px;
+		background-size: 20px 20px;
+		content: '';
+		display: block;
+		height: 10px;
+		left: 0;
+		position: absolute;
+		width: 100%;
+	}
+
+	&::before {
+		top: -10px;
+	}
+
+	&::after {
+		bottom: -10px;
+		transform: rotate(180deg);
+	}
+
+	li {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		border-right: 0;
+		color: var(--aura-root__heading--color);
+		float: none;
+		font-size: inherit;
+		font-weight: 700;
+		line-height: 1.2;
+		margin-right: 0;
+		padding: 20px 0 15px;
+		text-transform: none;
+
+		&::after {
+			clear: both;
+			content: '';
+			display: table;
+		}
+
+		&:first-of-type {
+			padding-top: 0;
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		strong {
+			float: right;
+			font-size: inherit;
+			line-height: 1.2;
+			padding-left: 20px;
+		}
+	}
+}

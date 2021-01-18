@@ -1,0 +1,28 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Admin Bar
+ * -------------------------------------------------------------------------- */
+:root {
+	/*
+	 * We need unit with zero here to make it work in calc.\
+	 * If we use 0px, unit is removed when SCSS is converted into CSS.
+	 */
+	--aura-admin-bar--height: 00px; /* stylelint-disable-line length-zero-no-unit */
+}
+
+.admin-bar {
+	--aura-admin-bar--height: 32px;
+
+	@media (max-width: 783px) {
+		--aura-admin-bar--height: 46px;
+	}
+
+	&[data-aura-site-scolled='true'] {
+		@media (max-width: 600px) {
+			/*
+		 * We need unit with zero here to make it work in calc.\
+		 * If we use 0px, unit is removed when SCSS is converted into CSS.
+		 */
+			--aura-admin-bar--height: 00px; /* stylelint-disable-line length-zero-no-unit */
+		}
+	}
+}

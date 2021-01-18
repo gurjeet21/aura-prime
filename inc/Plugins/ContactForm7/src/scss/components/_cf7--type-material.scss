@@ -1,0 +1,258 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Contact Form 7 (Type Regular)
+ * -------------------------------------------------------------------------- */
+.aura-cf7__form--type-material {
+	position: relative;
+
+	.aura-cf7 {
+		&__fieldset {
+			margin-bottom: 20px;
+
+			+ .aura-cf7__form__fieldset {
+				margin-top: 20px;
+			}
+		}
+
+		&__fieldset-title {
+			font-size: 16px;
+		}
+
+		&__field-inner {
+			padding-top: 15px;
+		}
+
+		&__field-label {
+			color: var(--aura-root__body--light-color);
+			font-size: 13px;
+			line-height: 1;
+			margin-bottom: 0;
+			pointer-events: none;
+			position: absolute;
+			top: 19px;
+			transition: var(--aura-root__transition);
+			z-index: 2;
+		}
+
+		&__field {
+			.wpcf7-form-control-wrap {
+				display: block;
+
+				&::after {
+					background-color: var(--aura-root__accent--color);
+					bottom: 0;
+					content: '';
+					height: 1px;
+					left: 50%;
+					position: absolute;
+					transition: var(--aura-root__transition);
+					width: 0;
+					z-index: 2;
+				}
+			}
+
+			.wpcf7-form-control {
+				background-color: transparent;
+				border: 0;
+				border-bottom: 1px solid var(--aura-root__general--border-color);
+				display: block;
+				font-size: 13px;
+				padding: 0 0 6px;
+				position: relative;
+				z-index: 1;
+			}
+
+			&[data-aura-has-focus],
+			&[data-aura-has-value] {
+				.aura-cf7__field-label {
+					color: var(--aura-root__accent--color);
+					font-size: 11px;
+					top: 0;
+					transition: var(--aura-root__transition);
+				}
+			}
+
+			&[data-aura-has-focus],
+			&[data-aura-has-datepicker] {
+				.wpcf7-form-control-wrap {
+					&::after {
+						left: 0;
+						width: 100%;
+					}
+				}
+			}
+
+			&[data-aura-invalid] {
+				padding-bottom: 15px;
+			}
+		}
+
+		&__field--type-radio,
+		&__field--type-checkbox {
+			.wpcf7-form-control {
+				border-bottom: 0;
+				padding-bottom: 0;
+			}
+
+			.wpcf7-list-item-label {
+				cursor: pointer;
+				margin-left: 0;
+			}
+
+			.aura-cf7__field--style-inline {
+				.wpcf7-list-item {
+					margin-left: 30px;
+
+					&:first-of-type {
+						margin-left: 0;
+					}
+				}
+			}
+
+			.aura-cf7__field--style-block {
+				.wpcf7-list-item {
+					margin-left: 0;
+					margin-top: 10px;
+					width: 100%;
+				}
+			}
+
+			.aura-cf7__field--has-label {
+				&__field-inner {
+					margin-top: 10px;
+				}
+			}
+		}
+
+		&__field--type-radio {
+			$size: 20px;
+
+			input {
+				display: none;
+			}
+
+			.wpcf7-list-item-label {
+				height: $size;
+				padding-left: ($size + 10px);
+				position: relative;
+
+				&::before,
+				&::after {
+					border-radius: 50%;
+					content: '';
+					position: absolute;
+					transition: var(--aura-root__transition);
+				}
+
+				&::before {
+					border: 2px solid var(--aura-root__body--light-color);
+					height: $size;
+					left: 0;
+					top: 0;
+					width: $size;
+				}
+
+				&::after {
+					background-color: var(--aura-root__accent--color);
+					height: $size;
+					left: 0;
+					top: 0;
+					transform: scale(0);
+					width: $size;
+				}
+			}
+
+			input:checked + .wpcf7-list-item-label {
+				&::before {
+					border-color: var(--aura-root__accent--color);
+				}
+
+				&::after {
+					transform: scale(0.5);
+				}
+			}
+		}
+
+		&__field--type-checkbox {
+			$size: 20px;
+
+			.wpcf7-list-item {
+				position: relative;
+			}
+
+			input {
+				display: none;
+			}
+
+			.wpcf7-list-item-label {
+				align-items: center;
+				display: flex;
+
+				span {
+					border: 2px solid var(--aura-root__body--light-color);
+					border-radius: 2px;
+					color: var(--aura-root__accent--color);
+					display: inline-block;
+					height: $size;
+					margin-right: 10px;
+					overflow: hidden;
+					position: relative;
+					width: $size;
+					z-index: 1;
+
+					&::before {
+						animation: aura-checkbox-off 0.3s forwards ease-out;
+						box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 inset;
+						content: '';
+						display: block;
+						height: 0;
+						margin-left: 6px;
+						margin-top: -4px;
+						position: absolute;
+						transform: rotate(45deg);
+						width: 0;
+						z-index: 1;
+					}
+				}
+			}
+
+			input:checked + .wpcf7-list-item-label {
+				span {
+					border-color: var(--aura-root__accent--color);
+
+					&::before {
+						animation: aura-checkbox-on 0.3s forwards ease-out;
+						box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+					}
+				}
+			}
+		}
+
+		&__field--type-footer-note {
+			font-size: 11px;
+			margin-bottom: 0;
+			margin-top: 20px;
+		}
+
+		&__field--type-submit {
+			margin-top: 20px;
+		}
+
+		&__field--type-footer-note,
+		&__field--type-submit {
+			.aura-cf7__field-inner {
+				padding: 0;
+			}
+
+			.wpcf7-form-control {
+				border-bottom: 0;
+				padding: 0;
+			}
+		}
+	}
+
+	.wpcf7-not-valid-tip {
+		color: #c0392b;
+		font-size: 12px;
+		position: absolute;
+	}
+}

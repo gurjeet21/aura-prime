@@ -1,0 +1,26 @@
+%zig-zag {
+	position: relative;
+
+	&::before,
+	&::after {
+		background-color: transparent;
+		background-image: radial-gradient(closest-side, transparent 9px, var(--aura-root__general--background-alt-color) 100%);
+		background-position: 0 10px, 40px 40px;
+		background-size: 20px 20px;
+		content: '';
+		display: block;
+		height: 10px;
+		left: 0;
+		position: absolute;
+		width: 100%;
+	}
+
+	&::before {
+		top: -10px;
+	}
+
+	&::after {
+		bottom: -10px;
+		transform: rotate(180deg);
+	}
+}

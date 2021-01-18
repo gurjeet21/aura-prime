@@ -1,0 +1,30 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Button
+ * -------------------------------------------------------------------------- */
+.aura-button-group {
+	--aura-button-group__space: 5px;
+
+	@media (min-width: #{get-breakpoint('md')}) {
+		--aura-button-group__space: 10px;
+	}
+
+	&::after {
+		clear: both;
+		content: '';
+		display: table;
+	}
+
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: calc(var(--aura-button-group__space) * -1);
+		margin-left: calc(var(--aura-button-group__space) * -1);
+		margin-right: calc(var(--aura-button-group__space) * -1);
+	}
+
+	&__item {
+		margin-bottom: var(--aura-button-group__space);
+		padding-left: var(--aura-button-group__space);
+		padding-right: var(--aura-button-group__space);
+	}
+}

@@ -1,0 +1,94 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Comment
+ * -------------------------------------------------------------------------- */
+.aura-comment {
+	border-top: 1px solid var(--aura-root__general--border-color);
+	flex-wrap: wrap;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	padding-top: 30px;
+
+	&:first-of-type {
+		border-top: 0;
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	.aura-comment {
+		margin-left: 35px;
+
+		@media (min-width: #{get-breakpoint('md')}) {
+			margin-left: 85px;
+		}
+	}
+
+	&__inner {
+		display: flex;
+	}
+
+	&__image {
+		flex-shrink: 0;
+		margin-right: 15px;
+		width: 70px;
+
+		img {
+			border-radius: 50%;
+		}
+	}
+
+	&__meta {
+		font-size: 13px;
+		line-height: 1;
+		margin-bottom: 10px;
+
+		> a,
+		> span {
+			&::before {
+				background-color: var(--aura-root__body--light-color);
+				border-radius: 100%;
+				content: '';
+				display: inline-block;
+				height: 5px;
+				margin: 0 10px;
+				position: relative;
+				top: -2px;
+				width: 5px;
+			}
+		}
+
+		> :first-child {
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	&__awaiting-approval {
+		color: orange;
+	}
+
+	&__content {
+		p {
+			margin-bottom: 10px;
+		}
+
+		> :last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__author-link {
+		color: var(--aura-root__body--light-color);
+		display: inline-block;
+		font-size: 13px;
+		font-style: italic;
+		margin-top: 10px;
+
+		&::before {
+			@extend %fas;
+
+			content: '\f0c1';
+			margin-right: 4px;
+		}
+	}
+}

@@ -1,0 +1,119 @@
+/* -----------------------------------------------------------------------------
+ * Pages > My Account
+ * -------------------------------------------------------------------------- */
+.woocommerce-account {
+	$sidebar-width: 300px;
+
+	.woocommerce-MyAccount-navigation {
+		width: $sidebar-width;
+
+		@media (max-width: 425px) {
+			width: 100%;
+		}
+	}
+
+	.woocommerce-MyAccount-content {
+		width: calc(100% - #{$sidebar-width} - 60px);
+
+		@media (max-width: #{get-breakpoint('md')}) {
+			margin-top: 60px;
+			width: 100%;
+		}
+	}
+}
+
+/* Pages > My Account > Navigation
+ * -------------------------------------------------------------------------- */
+.woocommerce-account {
+	.woocommerce-MyAccount-navigation {
+		background-color: var(--aura-root__general--background-alt-color);
+		padding: 40px;
+
+		@media (max-width: 768px) {
+			padding: 30px;
+		}
+
+		@media (max-width: 425px) {
+			padding: 25px;
+		}
+
+		ul {
+			list-style: none;
+			margin-bottom: 0;
+			padding-left: 0;
+		}
+
+		li {
+			border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+			a {
+				color: var(--aura-root__heading--color);
+				display: block;
+				padding: 13px 0 10px;
+
+				&:hover {
+					color: var(--aura-root__body--color);
+				}
+			}
+
+			&:first-of-type {
+				border-top: 0;
+
+				a {
+					padding-top: 0;
+				}
+			}
+
+			&:last-of-type {
+				a {
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+/* Pages > My Account > Content
+ * -------------------------------------------------------------------------- */
+.woocommerce-account {
+	.woocommerce-MyAccount-content {
+		> :last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+/* Orders */
+.woocommerce table.my_account_orders {
+	font-size: inherit;
+
+	.woocommerce-orders-table__cell-order-actions {
+		a {
+			font-size: 12px;
+			letter-spacing: 0.25px;
+			padding: 7px 8px 5px;
+
+			+ a {
+				margin-left: 2px;
+			}
+		}
+	}
+}
+
+/* Account details */
+.woocommerce-EditAccountForm {
+	.woocommerce-form-row {
+		span em {
+			display: block;
+			font-size: 14px;
+			margin-top: 5px;
+		}
+	}
+}
+
+/* View order */
+.woocommerce-view-order {
+	.woocommerce-customer-details {
+		margin-top: 60px;
+	}
+}

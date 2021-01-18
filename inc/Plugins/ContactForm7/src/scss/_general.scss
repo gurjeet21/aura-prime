@@ -1,0 +1,22 @@
+/* -----------------------------------------------------------------------------
+ * General
+ * -------------------------------------------------------------------------- */
+.wpcf7-form {
+	margin-bottom: 0;
+	position: relative;
+}
+
+span.wpcf7-not-valid-tip {
+	color: #e74c3c;
+	font-size: calc(var(--aura-root__body--font-size) * 0.875);
+	margin-top: 5px;
+}
+
+div.wpcf7-response-output {
+	font-weight: 700;
+	line-height: 1.4;
+	margin: 30px 0 0;
+	padding: 15px 25px;
+	text-align: center;
+	width: 100%;
+}

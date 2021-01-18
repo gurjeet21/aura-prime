@@ -1,0 +1,53 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Social Sites
+ * -------------------------------------------------------------------------- */
+:root {
+	--aura-social-sites__spacing: 10px;
+}
+
+.aura-social-sites {
+	line-height: 1;
+	width: 100%;
+
+	&__title {
+		margin-bottom: 10px;
+	}
+
+	&__list {
+		list-style: none;
+		margin: calc(var(--aura-social-sites__spacing) * -1);
+		padding: 0;
+	}
+
+	&__list-item {
+		display: inline-block;
+		margin: var(--aura-social-sites__spacing);
+	}
+
+	&__link {
+		display: inline-block;
+
+		.aura-svg {
+			fill: var(--aura-root__body--link-color);
+		}
+
+		&:hover {
+			.aura-svg {
+				fill: var(--aura-root__body--hover-color);
+			}
+		}
+	}
+
+	&__icon {
+		display: inline-block;
+
+		.aura-svg {
+			height: 18px;
+			width: auto;
+		}
+	}
+
+	&__text {
+		display: none;
+	}
+}

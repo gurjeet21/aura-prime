@@ -1,0 +1,54 @@
+%button {
+	@extend %button-normal;
+
+	&:hover {
+		@extend %button-hover;
+	}
+
+	&[disabled],
+	&.disabled {
+		@extend %button-disabled;
+	}
+}
+
+%button-normal {
+	background-color: var(--aura-button--background-color);
+	border-bottom-left-radius: var(--aura-button--border-bottom-left-radius);
+	border-bottom-right-radius: var(--aura-button--border-bottom-right-radius);
+	border-bottom-width: var(--aura-button--border-bottom-width);
+	border-color: var(--aura-button--border-color);
+	border-left-width: var(--aura-button--border-left-width);
+	border-right-width: var(--aura-button--border-right-width);
+	border-style: solid;
+	border-top-left-radius: var(--aura-button--border-top-left-radius);
+	border-top-right-radius: var(--aura-button--border-top-right-radius);
+	border-top-width: var(--aura-button--border-top-width);
+	box-shadow: var(--aura-button--box-shadow);
+	color: var(--aura-button--color);
+	cursor: pointer; // required.
+	display: inline-block;
+	font-family: var(--aura-button--font-family);
+	font-size: var(--aura-button--font-size);
+	font-style: var(--aura-button--font-style);
+	font-weight: var(--aura-button--font-weight);
+	letter-spacing: var(--aura-button--letter-spacing);
+	line-height: var(--aura-button--line-height);
+	padding-bottom: var(--aura-button--padding-bottom);
+	padding-left: var(--aura-button--padding-left);
+	padding-right: var(--aura-button--padding-right);
+	padding-top: var(--aura-button--padding-top);
+	text-transform: var(--aura-button--text-transform);
+}
+
+%button-hover {
+	background-color: var(--aura-button__hover--background-color);
+	border-color: var(--aura-button__hover--border-color);
+	color: var(--aura-button__hover--color);
+}
+
+%button-disabled {
+	background-color: var(--aura-button--background-color) !important;
+	border-color: var(--aura-button--border-color) !important;
+	color: var(--aura-button--color) !important;
+	cursor: not-allowed !important;
+}

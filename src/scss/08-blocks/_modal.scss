@@ -1,0 +1,76 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Modal
+ * -------------------------------------------------------------------------- */
+:root {
+	--aura-model__background--background-color: rgba(0, 0, 0, 0.75);
+	--aura-model__content-inner--background-color: #fff;
+	// Close button.
+	--aura-model__close_button--top: -15px;
+	--aura-model__close_button--right: -15px;
+	--aura-model__close_button--left: auto;
+	--aura-model__close_button--size: 45px;
+	--aura-model__close_button--color: #fff;
+	--aura-model__close_button--border-radius: 50%;
+	--aura-model__close_button--background-color: #111;
+}
+
+.aura-modal {
+	align-items: center;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	left: 0;
+	opacity: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transition: var(--aura-root__transition);
+	visibility: hidden;
+	z-index: 100;
+
+	&__background {
+		background-color: var(--aura-model__background--background-color);
+		height: 100%;
+		left: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+
+	&__content {
+		margin: auto;
+		pointer-events: none;
+		position: relative;
+	}
+
+	&__content-inner {
+		--aura-margin: 40px;
+
+		background-color: var(--aura-model__content-inner--background-color);
+		margin: var(--aura-margin);
+		margin-top: calc(var(--aura-admin-bar--height) + var(--aura-margin));
+		max-width: 750px;
+		padding: 30px;
+		pointer-events: all;
+		position: relative;
+		width: 100%;
+	}
+
+	&__close-button {
+		--aura-hamburger__bar--color: var(--aura-model__close_button--color);
+
+		align-items: center;
+		background-color: var(--aura-model__close_button--background-color);
+		border-radius: var(--aura-model__close_button--border-radius);
+		display: flex;
+		height: var(--aura-model__close_button--size);
+		justify-content: center;
+		left: var(--aura-model__close_button--left);
+		position: absolute;
+		right: var(--aura-model__close_button--right);
+		top: var(--aura-model__close_button--top);
+		width: var(--aura-model__close_button--size);
+	}
+}

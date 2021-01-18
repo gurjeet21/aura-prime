@@ -1,0 +1,49 @@
+%field-radio {
+	appearance: none;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	display: inline-block;
+	height: var(--aura-form__radio--size);
+	outline: none;
+	outline-width: 0;
+	position: relative;
+	width: var(--aura-form__radio--size);
+
+	&::before,
+	&::after {
+		border-radius: 50%;
+		content: '';
+		display: block;
+		left: 0;
+		position: absolute;
+		top: 0;
+	}
+
+	&::before {
+		border: 2px solid var(--aura-form__radio--color);
+		height: 100%;
+		width: 100%;
+	}
+
+	&::after {
+		background-color: var(--aura-form__radio--color);
+		height: calc(100% - 8px);
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%) scale(0);
+		transition: var(--aura-root__transition);
+		width: calc(100% - 8px);
+	}
+
+	&:checked {
+		&::after {
+			transform: translate(-50%, -50%) scale(1);
+		}
+	}
+
+	&:focus {
+		box-shadow: none !important;
+		outline: 0 !important;
+	}
+}

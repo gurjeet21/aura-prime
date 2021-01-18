@@ -1,0 +1,21 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Search Form
+ * -------------------------------------------------------------------------- */
+.aura-search-form {
+	display: flex;
+	margin-bottom: 0;
+	width: 100%;
+
+	&__button {
+		display: flex;
+		flex-shrink: 0;
+
+		.aura-button {
+			--aura-button--border-top-left-radius: 0;
+			--aura-button--border-top-right-radius: 0;
+			--aura-button--border-bottom-right-radius: 0;
+			--aura-button--border-bottom-left-radius: 0;
+			--aura-button--font-size: 18px;
+		}
+	}
+}

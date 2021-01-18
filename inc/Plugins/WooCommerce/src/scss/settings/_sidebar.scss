@@ -1,0 +1,20 @@
+/* -----------------------------------------------------------------------------
+ * Settings > Sidebar
+ * -------------------------------------------------------------------------- */
+:root {
+	$initial-breakpoint: get-breakpoint('lg') + 1;
+
+	@media (min-width: #{$initial-breakpoint}) {
+		--aura__wc--sidebar--width: 320px;
+		--aura__wc--sidebar--gutter: 40px;
+	}
+
+	@media (min-width: #{get-breakpoint(xl)}) {
+		--aura__wc--sidebar--width: 380px;
+	}
+
+	@media (min-width: #{get-breakpoint('2xl')}) {
+		--aura__wc--sidebar--width: 450px;
+		--aura__wc--sidebar--gutter: 60px;
+	}
+}

@@ -1,0 +1,18 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Alerts
+ * -------------------------------------------------------------------------- */
+.aura-message {
+	display: inline-block;
+	font-size: var(--aura-root__text--xs);
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 1.2;
+	padding: 2px 5px;
+	text-transform: none;
+}
+
+.aura-message--type-warning {
+	background-color: var(--aura-root__feedback--warning-color);
+	color: var(--aura-root__feedback--warning-text-color);
+}

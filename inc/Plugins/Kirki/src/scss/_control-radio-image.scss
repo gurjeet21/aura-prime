@@ -1,0 +1,31 @@
+/* -----------------------------------------------------------------------------
+ * Control: Radio Image.
+ * -------------------------------------------------------------------------- */
+.customize-control-kirki-radio-image {
+	label {
+		img {
+			border: 3px solid #999;
+			box-sizing: border-box;
+			filter: grayscale(100%);
+			opacity: 0.4;
+			transition: 250ms;
+		}
+
+		&:hover {
+			img {
+				filter: grayscale(0);
+				opacity: 0.75;
+			}
+		}
+	}
+
+	input:checked + label {
+		img {
+			background-color: #fff;
+			border: 3px solid #0085ba;
+			box-shadow: 0;
+			filter: grayscale(0);
+			opacity: 1;
+		}
+	}
+}

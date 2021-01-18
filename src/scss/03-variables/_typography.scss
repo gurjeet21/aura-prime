@@ -1,0 +1,36 @@
+/* -----------------------------------------------------------------------------
+ * Settings > Fonts.
+ * -------------------------------------------------------------------------- */
+:root {
+	// Base values.
+	--aura-root__text--base: 16px;
+	// Type scale.
+	--aura-root__text--xxs: calc(0.75 * var(--aura-root__text--base)); // 12px
+	--aura-root__text--xs: calc(0.875 * var(--aura-root__text--base)); // 14px
+	--aura-root__text--sm: calc(1 * var(--aura-root__text--base)); // 16px
+	--aura-root__text--md: calc(1.125 * var(--aura-root__text--base)); // 18px
+	--aura-root__text--lg: calc(1.25 * var(--aura-root__text--base)); // 20px
+	--aura-root__text--xl: calc(1.5 * var(--aura-root__text--base)); // 24px
+	--aura-root__text--xxl: calc(1.75 * var(--aura-root__text--base)); // 28px
+	--aura-root__text--xxxl: calc(2 * var(--aura-root__text--base)); // 32px
+	--aura-root__text--xxxxl: calc(2.5 * var(--aura-root__text--base)); // 40px
+	// Heading.
+	--aura-root__heading--font-family: -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue',
+		sans-serif;
+	--aura-root__heading--font-weight: 700;
+	--aura-root__heading--font-style: normal;
+	--aura-root__heading--font-size: var(--aura-root__text--lg);
+	--aura-root__heading--line-height: 1.2;
+	--aura-root__heading--text-transform: none;
+	--aura-root__heading--letter-spacing: 0;
+	// Body.
+	--aura-root__body--font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+	--aura-root__body--font-weight: 400;
+	--aura-root__body--font-style: normal;
+	--aura-root__body--font-size: var(--aura-root__text--sm);
+	--aura-root__body--line-height: 1.6;
+	--aura-root__body--text-transform: none;
+	--aura-root__body--letter-spacing: 0;
+}

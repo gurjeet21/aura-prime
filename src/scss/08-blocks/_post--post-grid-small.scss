@@ -1,0 +1,26 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Post: Grid Small.
+ * -------------------------------------------------------------------------- */
+.aura-post.aura-post--post-grid-small {
+	.aura-post {
+		&__media {
+			margin-bottom: 10px;
+		}
+
+		&__header {
+			margin-bottom: 0;
+		}
+
+		&__title {
+			font-size: 16px;
+			line-height: 1.2;
+		}
+
+		&__date {
+			color: var(--aura-root__body--light-color);
+			font-size: 14px;
+			line-height: 1.2;
+			margin-top: 3px;
+		}
+	}
+}

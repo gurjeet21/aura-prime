@@ -1,0 +1,110 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Nav Menu Widget
+ * -------------------------------------------------------------------------- */
+:root {
+	--aura-nav-menu-widget__button-bar--width: 12px;
+	--aura-nav-menu-widget__button-bar--height: 2px;
+	--aura-nav-menu-widget__button-click-area: 30px;
+}
+
+.aura-nav-menu-widget {
+	.menu {
+		font-weight: 700;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		> li {
+			border-bottom: 1px solid var(--aura-root__general--border-color);
+
+			&:last-of-type {
+				border-width: 0;
+			}
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		li {
+			position: relative;
+		}
+
+		a {
+			color: var(--aura-root__body--color);
+			display: block;
+			padding: 10px 0;
+		}
+
+		.aura-nav-menu-widget__submenu-button {
+			align-items: center;
+			cursor: pointer;
+			display: flex;
+			font-size: 0;
+			height: var(--aura-nav-menu-widget__button-click-area);
+			justify-content: flex-end;
+			line-height: 0;
+			margin: 0;
+			position: absolute;
+			right: 0;
+			top: 4px;
+			width: var(--aura-nav-menu-widget__button-click-area);
+			z-index: 1;
+
+			span {
+				height: var(--aura-nav-menu-widget__button-bar--width);
+				position: relative;
+				transition: var(--aura-root__transition);
+				width: var(--aura-nav-menu-widget__button-bar--width);
+
+				&::before,
+				&::after {
+					background-color: var(--aura-root__body--color);
+					content: '';
+					display: block;
+					height: var(--aura-nav-menu-widget__button-bar--height);
+					left: 50%;
+					pointer-events: none;
+					position: absolute;
+					top: 50%;
+					transform: translate(-50%);
+					width: 100%;
+				}
+
+				&::after {
+					transform: translate(-50%) rotate(-90deg);
+				}
+			}
+		}
+
+		.sub-menu {
+			display: none;
+			font-size: 13px;
+			font-weight: 400;
+			margin-bottom: 16px;
+
+			a {
+				padding: 6px 0;
+			}
+
+			.aura-nav-menu-widget__submenu-button {
+				top: 0;
+			}
+
+			.sub-menu {
+				margin-bottom: 6px;
+				margin-left: 15px;
+			}
+		}
+	}
+
+	[data-aura-submenu='expanded'] {
+		> .aura-nav-menu-widget__submenu-button {
+			span {
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

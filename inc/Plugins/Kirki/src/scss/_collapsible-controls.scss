@@ -1,0 +1,54 @@
+/* -----------------------------------------------------------------------------
+ * Collapsible Controls.
+ * -------------------------------------------------------------------------- */
+.customize-collapsible {
+	border-top: 1px solid rgba(0, 0, 0, 0.05);
+	margin: 0 -12px;
+	position: relative;
+
+	h3 {
+		background: white;
+		color: #555;
+		display: block;
+		line-height: 21px;
+		margin: 0;
+		padding: 10px 14px;
+		position: relative;
+
+		&::after {
+			color: #a0a5aa;
+			content: '\f347';
+			font: 400 20px/1 dashicons;
+			position: absolute;
+			right: 14px;
+			top: 12px;
+		}
+
+		&:hover {
+			background: #f5f5f5;
+			color: #0073aa;
+
+			&::after {
+				color: #0073aa;
+			}
+		}
+	}
+}
+
+.customize-control-collapsed {
+	margin-bottom: 0;
+
+	.customize-collapsible h3::after {
+		content: '\f345';
+	}
+}
+
+.customize-control-hidden {
+	display: none !important;
+}
+
+.customize-section-description-container {
+	+ .customize-control-kirki-custom .customize-collapsible {
+		border-top: 0;
+	}
+}

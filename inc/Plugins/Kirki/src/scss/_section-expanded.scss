@@ -1,0 +1,17 @@
+/* -----------------------------------------------------------------------------
+ * Section: Kirki Expanded.
+ * -------------------------------------------------------------------------- */
+.accordion-section.cannot-expand + li.control-section-kirki-expanded {
+	margin-top: -24px !important;
+}
+
+li.control-section-kirki-expanded {
+	.customize-section-title {
+		display: none !important;
+	}
+
+	ul.control-section-kirki-expanded {
+		padding-bottom: 7px !important;
+		padding-top: 7px !important;
+	}
+}

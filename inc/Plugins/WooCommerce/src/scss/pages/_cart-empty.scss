@@ -1,0 +1,38 @@
+/* -----------------------------------------------------------------------------
+ * Pages > Cart (Empty)
+ * -------------------------------------------------------------------------- */
+.woocommerce-cart {
+	.cart-empty {
+		color: var(--aura-root__heading--color);
+		font-size: 30px;
+		font-weight: 700;
+		margin-bottom: 15px;
+		text-align: center;
+		width: 100%;
+
+		&::before {
+			@extend %fas;
+
+			align-items: center;
+			background-color: var(--aura-root__accent--color);
+			border-radius: 50%;
+			color: var(--aura-root__accent--text-color);
+			content: '\f07a';
+			display: flex;
+			font-size: 24px;
+			height: 50px;
+			justify-content: center;
+			line-height: 1;
+			margin-bottom: 10px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50px;
+		}
+	}
+
+	.return-to-shop {
+		margin-bottom: 0;
+		text-align: center;
+		width: 100%;
+	}
+}

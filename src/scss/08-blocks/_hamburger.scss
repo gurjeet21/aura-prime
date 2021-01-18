@@ -1,0 +1,60 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Hamburger
+ * -------------------------------------------------------------------------- */
+:root {
+	--aura-hamburger__bar--width: 24px;
+	--aura-hamburger__bar--height: 3px;
+	--aura-hamburger__bar--space: 4px;
+	--aura-hamburger__bar--color: var(--aura-root__heading--color);
+}
+
+.aura-hamburger {
+	display: block;
+
+	&__bars {
+		display: flex;
+		height: calc((var(--aura-hamburger__bar--height) * 3) + (var(--aura-hamburger__bar--space) * 2));
+		position: relative;
+		width: var(--aura-hamburger__bar--width);
+	}
+
+	&__bar {
+		background-color: var(--aura-hamburger__bar--color);
+		height: var(--aura-hamburger__bar--height);
+		left: 0;
+		position: absolute;
+		top: 0;
+		transition: var(--aura-root__transition);
+		width: 100%;
+	}
+
+	&__bar-middle {
+		top: calc(var(--aura-hamburger__bar--height) + var(--aura-hamburger__bar--space));
+	}
+
+	&__bar-bottom {
+		top: calc((var(--aura-hamburger__bar--height) * 2) + (var(--aura-hamburger__bar--space) * 2));
+	}
+}
+
+.aura-hamburger[data-aura-enabled] {
+	.aura-hamburger {
+		&__bar-middle {
+			transform: scaleX(0);
+		}
+
+		&__bar-top,
+		&__bar-bottom {
+			top: calc(var(--aura-hamburger__bar--height) + var(--aura-hamburger__bar--space));
+			width: 100%;
+		}
+
+		&__bar-top {
+			transform: rotate(-45deg) scaleX(0.75);
+		}
+
+		&__bar-bottom {
+			transform: rotate(45deg) scaleX(0.75);
+		}
+	}
+}

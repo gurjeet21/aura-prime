@@ -1,0 +1,14 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Posts: Grid Small.
+ * -------------------------------------------------------------------------- */
+.aura-posts--post-grid-small {
+	grid-gap: 30px;
+
+	@media (min-width: #{get-breakpoint('md')}) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	@media (min-width: #{get-breakpoint(xl)}) {
+		grid-gap: 30px;
+	}
+}

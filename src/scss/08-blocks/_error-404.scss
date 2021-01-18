@@ -1,0 +1,26 @@
+/* -----------------------------------------------------------------------------
+ * Error 404
+ * -------------------------------------------------------------------------- */
+.aura-error-404 {
+	margin: 0 auto;
+	max-width: 500px;
+	padding: 40px 0 0;
+	text-align: center;
+
+	@media (min-width: #{get-breakpoint('lg')}) {
+		padding: 70px 0 40px;
+	}
+
+	@media (min-width: #{get-breakpoint(xl)}) {
+		padding: 120px 0 80px;
+	}
+
+	&__sub-title {
+		margin-bottom: 15px;
+	}
+
+	&__title {
+		color: var(--aura-root__accent--color);
+		margin-bottom: 25px;
+	}
+}

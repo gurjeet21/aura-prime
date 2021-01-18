@@ -1,0 +1,21 @@
+/* -----------------------------------------------------------------------------
+ * Settings > Form.
+ * -------------------------------------------------------------------------- */
+:root {
+	--aura-form__focus-color: #407fff;
+	// Text fields.
+	--aura-form__text--padding: 7px 10px;
+	// Checkbox.
+	--aura-form__checkbox--size: 18px;
+	--aura-form__checkbox--color: var(--aura-root__body--light-color);
+	--aura-form__checkbox-mark--color: var(
+		--aura-root__general--background-color
+	);
+	// Radio.
+	--aura-form__radio--size: 18px;
+	--aura-form__radio--color: var(--aura-root__body--light-color);
+	// Star.
+	--aura-form__star--size: 18px;
+	--aura-form__star--active-color: #f39c00;
+	--aura-form__star--inactive-color: #ccc;
+}

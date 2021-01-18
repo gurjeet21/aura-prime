@@ -1,0 +1,15 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Post: Grid.
+ * -------------------------------------------------------------------------- */
+.aura-post--layout-grid {
+	.aura-post {
+		&__title {
+			font-size: 21px;
+			line-height: 1.2;
+
+			@media (min-width: #{get-breakpoint('md')}) {
+				font-size: 24px;
+			}
+		}
+	}
+}

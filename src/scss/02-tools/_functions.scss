@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// Get map.
+// An easy way to fetch a deep value in a multi-level map.
+// get-map($colors, 'link', 'color')
+// -----------------------------------------------------------------------------
+@function get-map($map, $keys...) {
+	$value: $map;
+
+	@each $key in $keys {
+		$value: map-get($value, $key);
+	}
+
+	@return $value;
+}
+
+// -----------------------------------------------------------------------------
+// Get ratio.
+// -----------------------------------------------------------------------------
+@function get-ratio($width: 585px, $height: 450px) {
+	@return ($height / $width) * 100%;
+}
+
+// -----------------------------------------------------------------------------
+// Get text color based on the background color.
+// -----------------------------------------------------------------------------
+@function get-text-color($color) {
+	@if (lightness($color) > 40) {
+		@return #000;
+	} @else {
+		@return #fff;
+	}
+}

@@ -1,0 +1,142 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Button
+ * -------------------------------------------------------------------------- */
+:root {
+	// Colors.
+	--aura-button--color: var(--aura-root__accent--text-color);
+	--aura-button--background-color: var(--aura-root__accent--color);
+	--aura-button--border-color: var(--aura-root__accent--color);
+	// Hover Colors.
+	--aura-button__hover--color: #fff;
+	--aura-button__hover--background-color: #111;
+	--aura-button__hover--border-color: #111;
+	// Padding.
+	--aura-button--padding-top: 10px;
+	--aura-button--padding-right: 16px;
+	--aura-button--padding-bottom: 10px;
+	--aura-button--padding-left: 16px;
+	// Border width.
+	--aura-button--border-top-width: 0;
+	--aura-button--border-right-width: 0;
+	--aura-button--border-bottom-width: 0;
+	--aura-button--border-left-width: 0;
+	// Border radius.
+	--aura-button--border-top-left-radius: 0;
+	--aura-button--border-top-right-radius: 0;
+	--aura-button--border-bottom-left-radius: 0;
+	--aura-button--border-bottom-right-radius: 0;
+	// Font.
+	--aura-button--font-family: var(--aura-root__body--font-family);
+	--aura-button--font-size: 14px;
+	--aura-button--font-weight: var(--aura-root__body--font-weight);
+	--aura-button--font-style: var(--aura-root__body--font-style);
+	--aura-button--line-height: 1.2;
+	--aura-button--text-transform: var(--aura-root__body--text-transform);
+	--aura-button--letter-spacing: var(--aura-root__body--letter-spacing);
+	// Box shadow.
+	--aura-button--box-shadow: none;
+	// Icon space.
+	--aura-button__icon--space: 10px;
+}
+
+button,
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
+.aura-button {
+	@extend %button;
+}
+
+.aura-button {
+	&__inner {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__icon {
+		flex-shrink: 0;
+		line-height: 1;
+	}
+}
+
+.aura-button--icon-type-svg {
+	.aura-button {
+		&__icon {
+			width: 15px;
+
+			.aura-svg {
+				fill: var(--aura-button--color);
+			}
+		}
+	}
+
+	&:hover {
+		.aura-button {
+			&__icon {
+				.aura-svg {
+					fill: var(--aura-button__hover--color);
+				}
+			}
+		}
+	}
+}
+
+.aura-button--icon-position-before-text {
+	.aura-button {
+		&__icon {
+			margin-right: var(--aura-button__icon--space);
+			order: 1;
+		}
+
+		&__text {
+			margin-right: var(--aura-button__icon--space);
+			order: 2;
+		}
+	}
+}
+
+.aura-button--icon-position-after-text {
+	.aura-button {
+		&__icon {
+			margin-left: var(--aura-button__icon--space);
+		}
+	}
+}
+
+.aura-button--text-hidden {
+	.aura-button {
+		&__icon {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+
+/* Blocks > Buttons > Beta Button
+ * -------------------------------------------------------------------------- */
+.aura-button--type-beta {
+	// Colors.
+	--aura-button--color: var(--aura-root__body--link-color);
+	--aura-button--background-color: transparent;
+	--aura-button--border-color: transparent;
+	// Hover Colors.
+	--aura-button__hover--color: var(--aura-root__body--hover-color);
+	--aura-button__hover--background-color: transparent;
+	--aura-button__hover--border-color: transparent;
+	// Padding.
+	--aura-button--padding-top: 0;
+	--aura-button--padding-right: 0;
+	--aura-button--padding-bottom: 0;
+	--aura-button--padding-left: 0;
+	// Border width.
+	--aura-button--border-top-width: 0;
+	--aura-button--border-right-width: 0;
+	--aura-button--border-bottom-width: 0;
+	--aura-button--border-left-width: 0;
+	// Border radius.
+	--aura-button--border-top-left-radius: 0;
+	--aura-button--border-top-right-radius: 0;
+	--aura-button--border-bottom-right-radius: 0;
+	--aura-button--border-bottom-left-radius: 0;
+}

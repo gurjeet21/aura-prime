@@ -1,0 +1,59 @@
+/* -----------------------------------------------------------------------------
+ * General > Addresses
+ * -------------------------------------------------------------------------- */
+.woocommerce {
+	.addresses {
+		margin-top: 30px;
+
+		@media (max-width: #{get-breakpoint('lg')}) {
+			.col-1,
+			.col-2 {
+				width: 100%;
+			}
+
+			.col-2 {
+				margin-top: 30px;
+			}
+		}
+
+		.woocommerce-column__title,
+		.woocommerce-Address-title h3 {
+			font-size: 21px;
+			margin-bottom: 10px;
+			margin-top: 0;
+		}
+
+		.woocommerce-Address-title .edit {
+			background-color: var(--aura-root__accent--color);
+			border-radius: 0;
+			color: var(--aura-root__accent--text-color);
+			display: inline-block;
+			float: none;
+			font-size: 12px;
+			font-weight: 700;
+			letter-spacing: 0.25px;
+			line-height: 1;
+			margin-left: 10px;
+			outline: 0;
+			padding: 7px 8px 5px;
+
+			&:hover {
+				background-color: #000;
+				color: #fff;
+			}
+		}
+
+		address {
+			border: 0;
+			font-size: var(--aura-root__body--font-size);
+			margin-bottom: 0;
+			padding: 0;
+		}
+	}
+}
+
+.woocommerce-address-fields {
+	> :last-child {
+		margin-bottom: 0;
+	}
+}

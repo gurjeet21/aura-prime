@@ -1,0 +1,73 @@
+/* -----------------------------------------------------------------------------
+ * Vendor > Lightpick
+ * https://github.com/wakirin/Lightpick
+ * -------------------------------------------------------------------------- */
+.lightpick {
+	visibility: visible;
+	border-radius: 0;
+	opacity: 1;
+	transition: var(--aura-root__transition);
+	transform: scale(1);
+	transform-origin: top left;
+
+	&.is-hidden {
+		display: block;
+		visibility: hidden;
+		opacity: 0;
+		transform: scale(0);
+	}
+
+	&__previous-action,
+	&__next-action {
+		background-color: var(--aura-root__general--background-alt-color);
+		color: var(--aura-root__body--color);
+		line-height: 1;
+
+		&:hover {
+			background-color: var(--aura-button__hover--background-color);
+			color: var(--aura-button__hover--color);
+		}
+	}
+
+	.lightpick__day {
+		cursor: pointer;
+	}
+
+	.lightpick__day:not(.is-disabled):hover {
+		border-radius: 50%;
+		background-color: var(--aura-root__general--background-alt-color);
+		background-image: none;
+	}
+
+	.lightpick__day.is-today {
+		background-image: none;
+		color: var(--aura-root__accent--color);
+		font-weight: 700;
+	}
+
+	.lightpick__day.is-start-date,
+	.lightpick__day.is-end-date,
+	.lightpick__day.is-start-date:hover,
+	.lightpick__day.is-end-date:hover {
+		border-radius: 50%;
+		background-color: var(--aura-root__accent--color);
+		background-image: none;
+		color: var(--aura-root__accent--color);
+	}
+
+	&__month-title {
+		position: relative;
+		top: 2px;
+		cursor: pointer;
+	}
+
+	&__months-of-the-year-list {
+		margin: 8px 8px 12px;
+	}
+
+	&__month-of-the-year {
+		min-width: 80px;
+		border-radius: 0;
+		cursor: pointer;
+	}
+}

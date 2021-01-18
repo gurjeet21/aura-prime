@@ -1,0 +1,14 @@
+/* -----------------------------------------------------------------------------
+ * Utilities > General
+ * -------------------------------------------------------------------------- */
+.elementor-text-editor {
+	> :last-child {
+		margin-bottom: 0;
+	}
+}
+
+.elementor-image-gallery {
+	.gallery {
+		display: block;
+	}
+}

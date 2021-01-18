@@ -1,0 +1,21 @@
+{
+	"name": "madebyaura/aura-prime",
+	"description": "A WordPress theme.",
+	"license": "GPL-2.0",
+	"support": {
+		"email": "info@madebyaura.com"
+	},
+	"autoload": {
+		"psr-4": {
+			"MadeByAura\\Prime\\": "inc"
+		}
+	},
+	"require": {
+		"madebyaura/aura-wp-tools": "^3.1"
+	},
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+		"wp-coding-standards/wpcs": "^2.3",
+		"phpcompatibility/php-compatibility": "^9.3"
+	}
+}

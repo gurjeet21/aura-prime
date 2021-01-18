@@ -1,0 +1,15 @@
+/* -----------------------------------------------------------------------------
+ * General > Message
+ * -------------------------------------------------------------------------- */
+.woocommerce {
+	.woocommerce-Message {
+		background-color: var(--aura-root__general--background-alt-color);
+		border-top: 0;
+
+		.button {
+			font-size: 12px;
+			letter-spacing: 0.25px;
+			padding: 7px 8px 5px;
+		}
+	}
+}

@@ -1,0 +1,63 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Post: Post Single.
+ * -------------------------------------------------------------------------- */
+.aura-post--post-single {
+	.aura-post {
+		&__thumbnail {
+			img {
+				width: 100%;
+			}
+		}
+
+		&__header {
+			border-bottom: 1px solid var(--aura-root__general--border-color);
+			margin-bottom: 25px;
+			padding-bottom: 15px;
+		}
+
+		&__title {
+			font-size: 24px;
+
+			@media (min-width: #{get-breakpoint('md')}) {
+				font-size: 30px;
+			}
+
+			@media (min-width: #{get-breakpoint('2xl')}) {
+				font-size: 36px;
+			}
+		}
+
+		&__media {
+			margin-bottom: 25px;
+		}
+
+		&__terms--taxonomy-post-tag {
+			margin-top: 20px;
+
+			a {
+				color: var(--aura-root__body--color);
+
+				&:hover {
+					color: var(--aura-root__body--hover-color);
+				}
+			}
+
+			.aura-post__terms-title {
+				font-weight: 700;
+			}
+		}
+	}
+
+	.aura-post-share-links {
+		margin-top: 30px;
+	}
+
+	&.has-post-thumbnail {
+		.aura-post {
+			&__header {
+				border-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
+	}
+}

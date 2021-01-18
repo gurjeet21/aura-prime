@@ -1,0 +1,26 @@
+/* -----------------------------------------------------------------------------
+ * Nested Sections.
+ * -------------------------------------------------------------------------- */
+#customize-theme-controls .control-section.open {
+	.control-section-kirki-nested {
+		.accordion-section-title {
+			background: #fff;
+			border-left-color: #fff;
+			color: #555d66;
+
+			&::after {
+				color: #a0a5aa;
+			}
+
+			&:hover {
+				background: #f3f3f5;
+				border-left-color: #0073aa;
+				color: #0073aa;
+
+				&::after {
+					color: #0073aa;
+				}
+			}
+		}
+	}
+}

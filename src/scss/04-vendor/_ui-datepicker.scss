@@ -1,0 +1,120 @@
+/* -----------------------------------------------------------------------------
+ * Vendor > Datepicker
+ * https://jqueryui.com/datepicker/
+ * -------------------------------------------------------------------------- */
+.ui-datepicker.ui-widget {
+	background: #fff;
+	border: 0;
+	border-radius: 0;
+	box-shadow: var(--aura-root__box-shadow);
+	font-family: var(--aura--root__body--font-family);
+	font-size: var(--aura--root__body--font-size);
+
+	.ui-datepicker-header {
+		background: var(--aura-root__accent--color);
+		border: 0;
+		border-radius: 0;
+		color: var(--aura-root__accent--text-color);
+		padding: 0;
+	}
+
+	.ui-datepicker-title {
+		height: 30px;
+		line-height: 1.2;
+		margin: 0;
+		padding: 7px 30px;
+	}
+
+	.ui-datepicker-prev,
+	.ui-datepicker-next {
+		$height: 30px;
+
+		background-color: #000;
+		border-radius: 0;
+		cursor: pointer;
+		display: flex;
+		height: 30px;
+		top: 0;
+		width: 30px;
+		z-index: 1;
+
+		span {
+			align-items: center;
+			background: none;
+			display: flex;
+			font-size: 0;
+			height: 100%;
+			justify-content: center;
+			line-height: 0;
+			margin: 0;
+			position: static;
+			width: 100%;
+			z-index: 1;
+
+			&::before {
+				color: #fff;
+				font-size: 21px;
+				font-weight: 400;
+				line-height: 1;
+				position: relative;
+				text-align: center;
+				text-indent: 0;
+				top: -1px;
+			}
+		}
+
+		&.ui-state-hover {
+			background: #000;
+			border: 0;
+		}
+
+		&.ui-state-disabled {
+			opacity: 0.1;
+		}
+	}
+
+	.ui-datepicker-prev {
+		left: 0;
+
+		span::before {
+			content: '\2039';
+		}
+	}
+
+	.ui-datepicker-next {
+		right: 0;
+
+		span::before {
+			content: '\203A';
+		}
+	}
+
+	.ui-datepicker-calendar {
+		td {
+			a,
+			span {
+				background: none;
+				border-color: var(--aura-root__general--border-color);
+				color: var(--aura--root__body--color);
+				font-weight: 600;
+				text-align: center;
+			}
+
+			a:hover {
+				border-color: var(--aura--root__body--color);
+				font-weight: 700;
+			}
+		}
+
+		.ui-datepicker-current-day {
+			a,
+			span {
+				background: var(--aura-root__accent--color);
+				border-color: var(--aura-root__accent--color);
+				color: var(--aura-root__accent--text-color);
+				font-weight: 700;
+				text-align: center;
+			}
+		}
+	}
+}

@@ -1,0 +1,131 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Comment Form
+ * -------------------------------------------------------------------------- */
+.aura-comments {
+	.comment-respond {
+		background-color: var(--aura-root__general--background-alt-color);
+		margin-top: 10px;
+		padding: 30px;
+		position: relative;
+		width: 100%;
+	}
+
+	.comment-reply-title {
+		font-size: 0;
+		margin-bottom: 0;
+
+		small {
+			position: absolute;
+			right: 25px;
+			top: 25px;
+
+			a {
+				display: block;
+				font-size: 0;
+				height: 18px;
+				position: relative;
+				width: 18px;
+
+				&::before,
+				&::after {
+					background-color: var(--aura-root__body--color);
+					content: '';
+					height: 15px;
+					left: 50%;
+					position: absolute;
+					top: 50%;
+					transition: var(--aura-root__transition);
+					width: 3px;
+				}
+
+				&::before {
+					transform: translateY(-50%) rotate(45deg);
+				}
+
+				&::after {
+					transform: translateY(-50%) rotate(135deg);
+				}
+
+				&:hover {
+					&::before,
+					&::after {
+						color: var(--aura-root__body--link-color);
+					}
+				}
+			}
+		}
+	}
+
+	.comment-form {
+		margin-bottom: 0;
+	}
+
+	.logged-in-as,
+	.comment-notes {
+		font-size: 12px;
+		margin-bottom: 15px;
+	}
+
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url,
+	.comment-form-comment {
+		label {
+			display: none;
+		}
+	}
+
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url {
+		float: left;
+		overflow: hidden;
+
+		@media (min-width: #{get-breakpoint('md')}) {
+			padding-right: 10px;
+			width: 33.33%;
+		}
+
+		input {
+			display: block;
+			transition: var(--aura-root__transition);
+		}
+	}
+
+	.comment-form-comment {
+		margin-bottom: 10px;
+
+		textarea {
+			display: block;
+			height: 150px;
+			resize: none;
+			transition: var(--aura-root__transition);
+		}
+	}
+
+	.comment-form-url {
+		@media (min-width: #{get-breakpoint('md')}) {
+			padding-right: 0;
+		}
+	}
+
+	.comment-form-cookies-consent {
+		label {
+			margin-left: 7px;
+		}
+	}
+
+	.form-submit {
+		margin-bottom: 0;
+		text-align: right;
+		width: 100%;
+	}
+}
+
+.logged-in {
+	.aura-comments-block {
+		.comment-form-comment {
+			margin-bottom: 20px;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Related Posts
+ * -------------------------------------------------------------------------- */
+.aura-related-posts {
+	margin-top: 40px;
+
+	&__title {
+		border-bottom: 1px solid var(--aura-root__general--border-color);
+		font-size: 21px;
+		margin-bottom: 20px;
+		padding-bottom: 10px;
+	}
+}

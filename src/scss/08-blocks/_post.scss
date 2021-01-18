@@ -1,0 +1,102 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Post
+ * -------------------------------------------------------------------------- */
+.aura-post {
+	&__media {
+		margin-bottom: 20px;
+	}
+
+	&__thumbnail {
+		img {
+			display: block;
+		}
+	}
+
+	&__title {
+		margin-bottom: 0;
+
+		a {
+			color: var(--aura-root__heading--link-color);
+
+			&:hover {
+				color: var(--aura-root__heading--hover-color);
+			}
+		}
+	}
+
+	&__date-title,
+	&__author-title,
+	&__comments-count-title {
+		display: inline-block;
+		margin-right: 4px;
+	}
+
+	&__date-text,
+	&__author-text,
+	&__comments-count-text {
+		display: inline-block;
+	}
+
+	&__terms {
+		display: flex;
+		line-height: 1.2;
+	}
+
+	&__terms-title {
+		flex-shrink: 0;
+		margin-right: 4px;
+	}
+
+	&__terms--taxonomy-category {
+		font-weight: 700;
+		margin-bottom: 5px;
+	}
+
+	&__header {
+		margin-bottom: 20px;
+	}
+
+	&__header-meta {
+		color: var(--aura-root__body--light-color);
+		display: flex;
+		flex-wrap: wrap;
+		font-size: calc(var(--aura-root__body--font-size) / 1.1);
+		line-height: 1.2;
+		margin-top: 7px;
+
+		> div {
+			&::after {
+				background-color: var(--aura-root__body--muted-color);
+				border-radius: 50%;
+				content: '';
+				display: inline-block;
+				height: 6px;
+				margin: 0 10px;
+				position: relative;
+				top: -1px;
+				vertical-align: middle;
+				width: 6px;
+			}
+
+			&:last-child::after {
+				display: none;
+			}
+		}
+
+		a {
+			color: var(--aura-root__body--body-color);
+
+			&:hover {
+				color: var(--aura-root__body--link-color);
+			}
+		}
+	}
+
+	&__comments-count-number {
+		margin-right: 4px;
+	}
+
+	&__button {
+		margin-top: 15px;
+	}
+}

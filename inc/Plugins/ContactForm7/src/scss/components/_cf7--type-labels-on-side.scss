@@ -1,0 +1,33 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Type Labels on Side
+ * -------------------------------------------------------------------------- */
+.aura-cf7__form--type-labels-on-side {
+	.aura-cf7 {
+		&__field {
+			.aura-cf7__field-label {
+				display: block;
+			}
+
+			.wpcf7-form-control-wrap {
+				display: block;
+				padding: 0;
+			}
+		}
+
+		&__field-inner {
+			display: flex;
+		}
+
+		&__field-label {
+			flex-shrink: 0;
+			margin: 0;
+			margin-right: 40px;
+			padding-top: 14px;
+			width: 35%;
+		}
+	}
+
+	.wpcf7-form-control-wrap {
+		width: 100%;
+	}
+}

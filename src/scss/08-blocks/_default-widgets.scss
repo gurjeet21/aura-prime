@@ -1,0 +1,62 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Default Widgets
+ * -------------------------------------------------------------------------- */
+.widgettitle {
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+
+.widget_text {
+	.textwidget {
+		> :last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.widget_archive,
+.widget_categories,
+.widget_recent_entries,
+.widget_recent_comments,
+.widget_nav_menu,
+.widget_meta,
+.widget_product_categories {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			margin-bottom: 7px;
+			padding-left: 13px;
+			position: relative;
+
+			&::before {
+				background-color: var(--aura-root__body--link-color);
+				border-radius: 50%;
+				content: '';
+				height: 5px;
+				left: 0;
+				position: absolute;
+				top: 12px;
+				width: 5px;
+			}
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
+			a {
+				color: var(--aura-root__body--color);
+
+				&:hover {
+					color: var(--aura-root__body--link-color);
+				}
+			}
+
+			ul {
+				margin-top: 7px;
+			}
+		}
+	}
+}

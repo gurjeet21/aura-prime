@@ -1,0 +1,29 @@
+/* -----------------------------------------------------------------------------
+ * Pages > Order Received
+ * -------------------------------------------------------------------------- */
+.woocommerce-order-received {
+	.woocommerce-order {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 600px;
+	}
+
+	.woocommerce-thankyou-order-received {
+		display: none;
+	}
+}
+
+.woocommerce-order-received {
+	ul.order_details.woocommerce-thankyou-order-details {
+		margin-bottom: 60px;
+	}
+
+	.woocommerce-order-details {
+		margin-bottom: 0;
+	}
+
+	.woocommerce-customer-details {
+		margin-bottom: 0;
+		margin-top: 60px;
+	}
+}

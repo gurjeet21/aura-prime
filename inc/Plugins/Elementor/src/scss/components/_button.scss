@@ -1,0 +1,14 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Button
+ * -------------------------------------------------------------------------- */
+.elementor-widget-container .aura-button {
+	background-color: var(--aura-button--background-color) !important;
+	border-color: var(--aura-button--border-color) !important;
+	color: var(--aura-button--color) !important;
+
+	&:hover {
+		background-color: var(--aura-button__hover--background-color) !important;
+		border-color: var(--aura-button__hover--border-color) !important;
+		color: var(--aura-button__hover--color) !important;
+	}
+}

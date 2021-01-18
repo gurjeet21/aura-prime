@@ -1,0 +1,81 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Pagination
+ * -------------------------------------------------------------------------- */
+.aura-pagination {
+	margin-top: 40px;
+}
+
+/* Blocks > Pagination > Text
+ * -------------------------------------------------------------------------- */
+.aura-pagination--type-links {
+	display: flex;
+	width: 100%;
+
+	.aura-pagination {
+		&__link {
+			&--prev {
+				i {
+					margin-right: 2px;
+				}
+			}
+
+			&--next {
+				margin-left: auto;
+
+				i {
+					margin-left: 2px;
+				}
+			}
+		}
+	}
+}
+
+/* Blocks > Pagination > Numbers
+ * -------------------------------------------------------------------------- */
+.aura-pagination--type-numbers {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+
+	.page-numbers {
+		font-size: 14px;
+		padding-right: 6px;
+
+		&::before {
+			color: var(--aura-root__body--color-muted);
+			content: '/';
+			margin-right: 6px;
+		}
+	}
+
+	.prev,
+	.next {
+		padding-right: 0;
+		position: absolute;
+
+		&::before {
+			display: none;
+		}
+	}
+
+	.prev {
+		left: 0;
+	}
+
+	.next {
+		right: 0;
+	}
+
+	// Hide slash of link to the 1st page.
+	// when we are on the 1st page.
+	.page-numbers:nth-child(1):not(.prev),
+	// when we are not on the 1st page.
+	.prev + .page-numbers {
+		padding-left: 6px;
+
+		&::before {
+			display: none;
+		}
+	}
+}

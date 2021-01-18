@@ -1,0 +1,15 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > SVG
+ * -------------------------------------------------------------------------- */
+.aura-svg-sprite {
+	display: none;
+}
+
+.aura-svg {
+	--aura-svg--color: var(--aura-root__heading--color);
+
+	display: block;
+	fill: var(--aura-svg--color);
+	height: 100%;
+	width: 100%;
+}

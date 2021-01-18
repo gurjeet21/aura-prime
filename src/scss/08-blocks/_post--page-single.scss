@@ -1,0 +1,44 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Post: Page Single.
+ * -------------------------------------------------------------------------- */
+.aura-post--page-single {
+	.aura-post {
+		&__thumbnail {
+			img {
+				width: 100%;
+			}
+		}
+
+		&__header {
+			border-bottom: 1px solid var(--aura-root__general--border-color);
+			margin-bottom: 25px;
+			padding-bottom: 15px;
+		}
+
+		&__title {
+			font-size: 24px;
+
+			@media (min-width: #{get-breakpoint('md')}) {
+				font-size: 30px;
+			}
+
+			@media (min-width: #{get-breakpoint('2xl')}) {
+				font-size: 36px;
+			}
+		}
+
+		&__media {
+			margin-bottom: 25px;
+		}
+	}
+
+	&.has-post-thumbnail {
+		.aura-post {
+			&__header {
+				border-bottom: 0;
+				margin-bottom: 20px;
+				padding-bottom: 0;
+			}
+		}
+	}
+}

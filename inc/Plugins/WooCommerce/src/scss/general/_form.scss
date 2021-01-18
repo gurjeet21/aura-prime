@@ -1,0 +1,71 @@
+/* -----------------------------------------------------------------------------
+ * General > Form
+ * -------------------------------------------------------------------------- */
+.woocommerce form {
+	> :first-child {
+		margin-top: 0;
+	}
+
+	> :last-child {
+		margin-bottom: 0;
+	}
+
+	fieldset {
+		margin-top: 40px;
+	}
+
+	legend {
+		color: var(--aura-root__heading--color);
+		display: block;
+		font-size: 21px;
+		font-weight: 700;
+		line-height: 1.2;
+		margin-bottom: 20px;
+	}
+
+	.form-row {
+		margin: 0 0 20px;
+		padding: 0;
+
+		&#billing_address_1_field,
+		&#shipping_address_1_field {
+			margin-bottom: 5px;
+		}
+
+		label {
+			color: var(--aura-root__body-color);
+			font-weight: 700;
+			line-height: 1.2;
+		}
+
+		input.input-text,
+		textarea {
+			line-height: 1.5;
+		}
+
+		.input-checkbox {
+			display: inline-block;
+			margin: 0;
+			vertical-align: baseline;
+		}
+	}
+}
+
+.woocommerce form .form-row-first,
+.woocommerce form .form-row-last,
+.woocommerce-page form .form-row-first,
+.woocommerce-page form .form-row-last {
+	width: 49%;
+}
+
+.woocommerce-form__label-for-checkbox {
+	cursor: pointer;
+
+	span {
+		margin-left: 5px;
+	}
+}
+
+.woocommerce-form__input-checkbox {
+	@extend %field-checkbox;
+}

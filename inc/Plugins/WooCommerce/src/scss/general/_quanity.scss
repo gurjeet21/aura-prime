@@ -1,0 +1,95 @@
+/* -----------------------------------------------------------------------------
+ * General > Quantity
+ * -------------------------------------------------------------------------- */
+$height: 40px;
+$offset: 2px;
+$size: 10px;
+$path-width: 2px;
+
+.woocommerce .quantity {
+	align-items: center;
+	display: flex;
+
+	.qty {
+		appearance: textfield;
+		background-color: var(--aura-root__general--background-color);
+		border: 1px solid var(--aura-root__general--border-color);
+		border-left: 0;
+		border-right: 0;
+		color: var(--aura-root__heading--color);
+		font-size: var(--aura-root__body--font-size);
+		font-weight: 700;
+		min-height: $height;
+		padding: 0;
+		position: relative;
+		text-align: center;
+		width: 40px;
+		z-index: 1;
+
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+		}
+	}
+
+	.quantity-minus,
+	.quantity-plus {
+		background-color: var(--aura-root__general--background-alt-color);
+		border: 1px solid var(--aura-root__general--border-color);
+		cursor: pointer;
+		display: inline-block;
+		height: $height;
+		position: relative;
+		transition: var(--aura-root__transition);
+		width: $height;
+
+		&::before,
+		&::after {
+			background-color: var(--aura-root__body--color);
+			content: '';
+			display: block;
+			height: $path-width;
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			transition: var(--aura-root__transition);
+			width: $size;
+		}
+
+		&::after {
+			transform: translate(-50%, -50%) rotate(90deg);
+		}
+
+		&:hover {
+			background-color: var(--aura-button__hover--background-color);
+			border-color: var(--aura-button__hover--border-color);
+
+			&::before,
+			&::after {
+				background-color: var(--aura-button__hover--color);
+			}
+		}
+	}
+
+	.quantity-plus {
+		border-radius: 0 50% 50% 0;
+
+		&::before,
+		&::after {
+			margin-left: $offset * -1;
+		}
+	}
+
+	.quantity-minus {
+		border-radius: 50% 0 0 50%;
+
+		&::before {
+			margin-left: $offset;
+		}
+
+		&::after {
+			display: none;
+		}
+	}
+}

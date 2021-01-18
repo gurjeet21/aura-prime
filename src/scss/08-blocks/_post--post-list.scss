@@ -1,0 +1,25 @@
+/* -----------------------------------------------------------------------------
+ * Blocks > Post: Post list.
+ * -------------------------------------------------------------------------- */
+@media (min-width: #{get-breakpoint('2xl')}) {
+	.aura-post--post-list {
+		display: flex;
+
+		.aura-post {
+			&__media {
+				flex-shrink: 0;
+				margin-bottom: 0;
+				margin-right: 40px;
+				width: 450px;
+			}
+
+			&__text {
+				align-self: center;
+			}
+
+			&__title {
+				font-size: 27px;
+			}
+		}
+	}
+}

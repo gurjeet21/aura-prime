@@ -1,0 +1,77 @@
+/* -----------------------------------------------------------------------------
+ * Elements > Form.
+ * -------------------------------------------------------------------------- */
+form {
+	margin-bottom: 0;
+}
+
+::placeholder {
+	color: var(--aura-root__body--muted-color);
+	font-style: italic;
+}
+
+label {
+	font-weight: 700;
+	margin-bottom: 7px;
+
+	.required {
+		color: var(--aura-root__feedback--error-color);
+		text-decoration: none;
+	}
+}
+
+button,
+input,
+select,
+textarea {
+	border-radius: var(--aura-root__border-radius--form); // required for iOS
+	box-shadow: none; // required for iOS
+	color: var(--aura-root__body--color);
+	font-family: inherit;
+	font-size: var(--aura-root__body--font-size);
+	font-style: normal;
+	line-height: 1.5;
+	outline: none;
+	transition: var(--aura-root__transition);
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.5 !important;
+	}
+
+	&:focus {
+		box-shadow: 0 0 0 2px var(--aura-form__focus-color);
+		outline: 0;
+	}
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='url'],
+input[type='number'],
+input[type='date'],
+input[type='password'],
+input[type='search'],
+select,
+textarea {
+	border: 1px solid var(--aura-root__general--border-color);
+	color: var(--aura-root__body--color);
+	padding: var(--aura-form__text--padding);
+	width: 100%;
+}
+
+textarea {
+	width: 100%;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+	position: relative;
+	top: 3px;
+
+	+ label {
+		margin-bottom: 0;
+		padding-left: 10px;
+	}
+}

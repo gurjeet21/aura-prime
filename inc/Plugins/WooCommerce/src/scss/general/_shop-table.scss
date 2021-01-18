@@ -1,0 +1,35 @@
+/* -----------------------------------------------------------------------------
+ * General > Shop Table
+ * -------------------------------------------------------------------------- */
+.woocommerce table.shop_table {
+	--aura-shop-table--border-color: var(--aura-root__general--border-color);
+
+	border: 0;
+	border-radius: 0;
+	margin-bottom: 0;
+
+	tr {
+		&:first-of-type {
+			td {
+				border-top: 0;
+			}
+		}
+
+		th,
+		td {
+			border: 0;
+			border-bottom: 1px solid var(--aura-shop-table--border-color);
+			line-height: 1.2;
+			padding: 15px 10px 12px;
+			vertical-align: middle;
+
+			&:first-of-type {
+				padding-left: 0;
+			}
+
+			&:last-of-type {
+				padding-right: 0;
+			}
+		}
+	}
+}

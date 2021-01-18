@@ -1,0 +1,35 @@
+%formatted-text {
+	> :first-child {
+		margin-top: 0;
+	}
+
+	> :last-child {
+		margin-bottom: 0;
+	}
+
+	> h1,
+	> h2,
+	> h3,
+	> h4,
+	> h5,
+	> h6 {
+		margin-top: var(--aura-root__space--lg);
+	}
+
+	> h1 {
+		border-bottom: 1px solid var(--aura-root__general--border-color);
+		margin-bottom: var(--aura-root__space--md);
+		padding-bottom: var(--aura-root__space--xxs);
+	}
+
+	form {
+		margin-bottom: 0 var(--aura-root__space--md);
+	}
+
+	ol,
+	ul {
+		li + li {
+			margin-top: 5px;
+		}
+	}
+}
